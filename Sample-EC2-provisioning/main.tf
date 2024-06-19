@@ -1,3 +1,4 @@
+terraform{
 resource "aws_security_group" "example" {
   name_prefix = "example-sg"
 
@@ -19,8 +20,9 @@ resource "aws_security_group" "example" {
 resource "aws_instance" "example" {
   ami           = var.ami_id
   instance_type = var.instance_type
-
+#we can use instance_state = "stopped" or instance_state = "hibernate" to manage the state of the ec2 instance 
   tags = {
     Name = "example-instance"
   }
+}
 }
