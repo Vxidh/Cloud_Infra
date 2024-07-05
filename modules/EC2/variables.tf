@@ -1,14 +1,16 @@
-variable "region" {
-  description = "The AWS region to create resources in"
-  default     = "ap-south-1"
+variable "ami"{
+    description = "Sets the AMI for the EC2 Instance"
+    type = string
 }
 
-variable "instance_type" {
-  description = "The EC2 instance type"
-  default     = "t2.micro"
+variable "instance_type"{
+    description = "Sets the type of the EC2 instance"
+    type = string
 }
+variable "instance_state"{
+    description = "Sets the current state of the EC2 instance"
+    type = string
+}
+variable "core_count"{}
+variable "threads_per_core" {}
 
-variable "ami_id" {
-  description = "The AMI ID for the EC2 instance"
-  default     = "ami-0682cb73406023f4f"
-}

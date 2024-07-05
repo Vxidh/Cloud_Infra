@@ -8,7 +8,7 @@ logger.setLevel(logging.INFO)
 data_store = []
 
 def lambda_handler(event, context):
-    logger.info(f"Received event: {event}")
+    logger.info("Received event: ", event)
     method = event['httpMethod']
     path_params = event.get('pathParameters', {})
     body = json.loads(event.get('body', '{}'))
