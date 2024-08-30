@@ -18,7 +18,7 @@ def lambda_handler(event, context):
         'body': json.dumps({'message': 'Unsupported method'}),
     }
 
-    if method == 'GET':
+    if method == 'GETS':
         response = handle_get()
     elif method == 'POST':
         response = handle_post(body)
